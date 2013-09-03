@@ -1,0 +1,82 @@
+/******************************************************************
+Site Name: DoC
+Author: 
+
+Stylesheet: Admin Stylesheet
+
+This stylesheet is loaded (if admin.php is setup in your
+functions file) on the admin backend.
+
+For more info, check out the codex:
+http://codex.wordpress.org/Creating_Admin_Themes
+
+******************************************************************/
+
+.updated.doc {
+	border-color: #21759b;
+	background-color: #bbe9ff
+}
+#citekey-input {
+	display: block; 
+	margin-top: 6px;
+	font-family: courier, monospace;
+	font-size: 10px;
+	width: 350px
+}
+.wp-list-table #cite-key {width: 35%}
+.wp-list-table #publish-date {width: 12%}
+.wp-list-table #p2p-to-people_to_publications {width: 12%}
+.wp-list-table #the-list .cite-key {font-family: courier, monospace; font-size: 10px}
+.wp-list-table #the-list .cite-key input[type=text] {width: 85%}
+
+
+.menu-icon-project .wp-menu-image img,
+.menu-icon-person .wp-menu-image img,
+.menu-icon-publication .wp-menu-image img,
+.menu-icon-grant .wp-menu-image img {display: none}
+
+.wp-menu-image i {
+	width: 29px;
+	text-align: center;
+	display: block;
+	padding-top: 7px;
+}
+
+.menu-icon-project .wp-menu-image i {
+	font-size: 1.25em;
+	margin-top: -2px
+}
+
+/* APPEARANCE > THEME > CUSTOMIZE */
+#customize-controls .accordion-section {clear: both}
+#accordion-section-doc_custom_css .accordion-section-content {overflow: visible}
+
+/* PEOPLE */
+#icon-edit.icon32-posts-person,
+#icon-edit.icon32-posts-project,
+#icon-edit.icon32-posts-publication,
+#icon-edit.icon32-posts-grant {
+	background: none;
+	line-height: 0.15em;
+	font-size: 28px;
+	padding-left: 5px;
+	margin-right: 0;
+	opacity: .75;
+	color: #21759b;	
+}
+#icon-edit.icon32-posts-project {
+	font-size: 36px;
+	line-height: 0em;
+}
+#icon-edit.icon32-posts-person {
+	font-size: 25px;
+	list-style: 3em
+}
+/*
+#acf_176 .handlediv,
+#acf_176 .hndle {display: none}
+*/
+
+
+
+/* admin CSS */

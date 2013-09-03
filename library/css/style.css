@@ -1,0 +1,2488 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Main Stylesheet
+
+Here's where the magic happens. Here, you'll see we are calling in
+the separate media queries. The base mobile goes outside any query
+and is called at the beginning, after that we call the rest
+of the styles inside media queries.
+******************************************************************/
+/*! normalize.css 2012-07-07T09:50 UTC - http://github.com/necolas/normalize.css */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects `block` display not defined in IE6/7/8/9 & FF3.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+/*
+ * Corrects `inline-block` display not defined in IE6/7/8/9 & FF3.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+/*
+ * Prevents modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+/*
+ * Addresses styling for `hidden` attribute not present in IE7/8/9, FF3, S4.
+ * Known issue: no IE6 support.
+ */
+[hidden] {
+  display: none;
+}
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/*
+ * Addresses `font-family` inconsistency between `textarea` and other form
+ * elements.
+ */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+/*
+ * Addresses margins handled incorrectly in IE6/7.
+ */
+body {
+	margin: 0;
+	font-size: 62.5%;
+	font-family: Arial, Verdana, sans-serif;
+	background-color: #fff;
+	color: #333;
+}
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/*
+ * Addresses `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted;
+}
+/*
+ * Improves readability when focused and also mouse hovered in all browsers.
+ * people.opera.com/patrickl/experiments/keyboard/test
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Addresses font sizes and margins set differently in IE6/7.
+ * Addresses font sizes within `section` and `article` in FF4+, Chrome, S5.
+ */
+h1 {
+  font-size: 1.7em;
+  margin: .5em 0 .1em 0;
+}
+h2 {
+  font-size: 1.5em;
+  margin: 0 0 0.83em 0;
+}
+h3 {
+  font-size: 1.17em;
+  margin: 0 0 1em 0;
+}
+h4 {
+  font-size: 1em;
+  margin: 0 0 1.33em 0;
+}
+h5 {
+  font-size: 0.83em;
+  margin: 0 0 1.67em 0;
+}
+h6 {
+  font-size: 0.75em;
+  margin: 0 0 2.33em 0;
+}
+h1.archive-title {
+	margin: .2em 0 .9em 0;
+}
+/*
+ * Addresses styling not present in IE7/8/9, S5, Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+/*
+ * Addresses style set to `bolder` in FF3+, S4/5, Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+blockquote {
+  margin: 1em 40px;
+}
+/*
+ * Addresses styling not present in S5, Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+/*
+ * Addresses styling not present in IE6/7/8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+/*
+ * Addresses margins set differently in IE6/7.
+ */
+p,
+pre {
+  margin: 1em 0;
+}
+/*
+ * Corrects font family set oddly in IE6, S4/5, Chrome.
+ * en.wikipedia.org/wiki/User:Davidgothberg/Test59
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+/*
+ * Improves readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+/*
+ * Addresses CSS quotes not supported in IE6/7.
+ */
+q {
+  quotes: none;
+}
+/*
+ * Addresses `quotes` property not supported in S4.
+ */
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+small {
+  font-size: 75%;
+}
+/*
+ * Prevents `sub` and `sup` affecting `line-height` in all browsers.
+ * gist.github.com/413930
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+/*
+ * Addresses margins set differently in IE6/7.
+ */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+dd {
+  margin: 0 0 0 40px;
+}
+/*
+ * Addresses paddings set differently in IE6/7.
+ */
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+/*
+ * Corrects list images handled incorrectly in IE7.
+ */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+nav li {display: inline}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * 1. Removes border when inside `a` element in IE6/7/8/9, FF3.
+ * 2. Improves image quality when scaled in IE7.
+ *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+img {
+  border: 0;
+  /* 1 */
+
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+
+}
+/*
+ * Corrects overflow displayed oddly in IE9.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/*
+ * Addresses margin not present in IE6/7/8/9, S5, O11.
+ */
+figure {
+  margin: 0;
+}
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Corrects margin displayed oddly in IE6/7.
+ */
+form {
+  margin: 0;
+}
+/*
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+/*
+ * 1. Corrects color not being inherited in IE6/7/8/9.
+ * 2. Corrects text not wrapping in FF3.
+ * 3. Corrects alignment displayed oddly in IE6/7.
+ */
+legend {
+  border: 0;
+  /* 1 */
+
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+
+  *margin-left: -7px;
+  /* 3 */
+
+}
+/*
+ * 1. Corrects font size not being inherited in all browsers.
+ * 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome.
+ * 3. Improves appearance and consistency in all browsers.
+ */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+
+  margin: 0;
+  /* 2 */
+
+  vertical-align: baseline;
+  *vertical-align: middle;
+  /* 3 */
+
+}
+/*
+ * Addresses FF3/4 setting `line-height` on `input` using `!important` in the
+ * UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Corrects inability to style clickable `input` types in iOS.
+ * 3. Improves usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Removes inner spacing in IE7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE6.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+
+  cursor: pointer;
+  /* 3 */
+
+  *overflow: visible;
+  /* 4 */
+
+}
+/*
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+/*
+ * 1. Addresses box sizing set to content-box in IE8/9.
+ * 2. Removes excess padding in IE8/9.
+ * 3. Removes excess padding in IE7.
+ *    Known issue: excess padding remains in IE6.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+
+  padding: 0;
+  /* 2 */
+
+  *height: 13px;
+  *width: 13px;
+  /* 3 */
+
+}
+/*
+ * 1. Addresses `appearance` set to `searchfield` in S5, Chrome.
+ * 2. Addresses `box-sizing` set to `border-box` in S5, Chrome (include `-moz`
+ *    to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+
+  box-sizing: content-box;
+}
+/*
+ * Removes inner padding and search cancel button in S5, Chrome on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/*
+ * Removes inner padding and border in FF3+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/*
+ * 1. Removes default vertical scrollbar in IE6/7/8/9.
+ * 2. Improves readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+
+  vertical-align: top;
+  /* 2 */
+
+}
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/*
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/******************************************************************
+CUSTOMIZED RESET VALUES
+I added these extra styles as a more personalized reset. Feel free
+to remove them if you like or add your own. If you want to update
+the normalize styles, make sure to edit from this point up.
+******************************************************************/
+p {
+  -webkit-hyphens: auto;
+  -epub-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+b,
+strong,
+.strong {
+  font-weight: bold;
+}
+dfn,
+em,
+.em {
+  font-style: italic;
+}
+small,
+.small {
+  font-size: 75%;
+}
+ul,
+ol {
+  padding: 0;
+  list-style-type: none;
+}
+dd {
+  margin: 0;
+}
+.sidebar ul,
+.sidebar ol,
+.commentlist {
+  list-style: none;
+}
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Mixins & Constants Stylesheet
+
+This is where you can take advantage of LESS' great features: 
+Mixins & Constants. I won't go in-depth on how they work exactly,
+there are a few articles below that will help do that. What I will
+tell you is that this will help speed up simple changes like
+changing a color or adding CSS3 techniques like box shadow and
+border-radius.
+
+A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+remember less is more. 
+
+******************************************************************/
+/*********************
+CLEARFIXIN'
+*********************/
+.clearfix {
+  zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+/*********************
+TOOLS
+*********************/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.image-replacement {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/
+/*********************
+TYPOGRAPHY
+*********************/
+/* 	To embed your own fonts, use this syntax
+	and place your fonts inside the 
+	library/fonts folder. For more information
+	on embedding fonts, go to:
+	http://www.fontsquirrel.com/
+	Be sure to remove the comment brackets.
+*/
+/*	@font-face {
+    	font-family: 'Font Name';
+    	src: url('../fonts/font-name.eot');
+    	src: url('../fonts/font-name.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/font-name.woff') format('woff'),
+             url('../fonts/font-name.ttf') format('truetype'),
+             url('../fonts/font-name.svg#font-name') format('svg');
+    	font-weight: normal;
+    	font-style: normal;
+	}
+*/
+/* 
+use the best ampersand 
+http://simplebits.com/notebook/2008/08/14/ampersands-2/
+*/
+span.amp {
+  font-family: Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
+  font-style: italic;
+}
+/* text alignment */
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.alert {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid;
+}
+.alert-help {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid;
+  border-color: #e8dc59;
+  background: #ebe16f;
+}
+.alert-info {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid;
+  border-color: #bfe4f4;
+  background: #d5edf8;
+}
+.alert-error {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid;
+  border-color: #f8cdce;
+  background: #fbe3e4;
+}
+.alert-success {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid;
+  border-color: #deeaae;
+  background: #e6efc2;
+}
+/*********************
+BORDER RADIUS
+*********************/
+/* 
+NOTE: For older browser support (and some mobile), 
+don't use the shorthand to define *different* corners. 
+
+USAGE: .border-radius(4px); 
+
+*/
+/*********************
+TRANISTION
+*********************/
+/* .transition(all,2s); */
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can 
+really slow down your CSS. Don't overdo it.
+*********************/
+/* .css-gradient(#dfdfdf,#f8f8f8); */
+/*********************
+BOX SHADOW
+*********************/
+/* .boxShadow(0,0,4px,0,#444); */
+/* .boxShadow(none); */
+/*********************
+BUTTONS
+*********************/
+.button,
+.button:visited {
+  border: 1px solid #be0d37;
+  border-top-color: #db0f3f;
+  border-left-color: #db0f3f;
+  padding: 4px 12px;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  margin-bottom: 20px;
+  line-height: 21px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #e40f42;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f01d4f), to(#e40f42));
+  background-image: -webkit-linear-gradient(top, #f01d4f, #e40f42);
+  background-image: -moz-linear-gradient(top, #f01d4f, #e40f42);
+  background-image: -o-linear-gradient(top, #f01d4f, #e40f42);
+  background-image: linear-gradient(to bottom, #f01d4f, #e40f42);
+}
+.button:hover,
+.button:visited:hover,
+.button:focus,
+.button:visited:focus {
+  color: #ffffff;
+  border: 1px solid #be0d37;
+  border-top-color: #9d0a2d;
+  border-left-color: #9d0a2d;
+  background-color: #cc0e3b;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e40f42), to(#cc0e3b));
+  background-image: -webkit-linear-gradient(top, #e40f42, #cc0e3b);
+  background-image: -moz-linear-gradient(top, #e40f42, #cc0e3b);
+  background-image: -o-linear-gradient(top, #e40f42, #cc0e3b);
+  background-image: linear-gradient(to bottom, #e40f42, #cc0e3b);
+}
+.button:active,
+.button:visited:active {
+  background-color: #f01d4f;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e40f42), to(#f01d4f));
+  background-image: -webkit-linear-gradient(top, #e40f42, #f01d4f);
+  background-image: -moz-linear-gradient(top, #e40f42, #f01d4f);
+  background-image: -o-linear-gradient(top, #e40f42, #f01d4f);
+  background-image: linear-gradient(to bottom, #e40f42, #f01d4f);
+}
+.blue-button,
+.blue-button:visited {
+  border-color: #1472ad;
+  text-shadow: 0 1px 1px #1472ad;
+  background-color: #1681c4;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1990db), to(#1681c4));
+  background-image: -webkit-linear-gradient(top, #1990db, #1681c4);
+  background-image: -moz-linear-gradient(top, #1990db, #1681c4);
+  background-image: -o-linear-gradient(top, #1990db, #1681c4);
+  background-image: linear-gradient(to bottom, #1990db, #1681c4);
+  -webkit-box-shadow: inset 0 0 3px #59b3ec;
+  -moz-box-shadow: inset 0 0 3px #59b3ec;
+  box-shadow: inset 0 0 3px #59b3ec;
+}
+.blue-button:hover,
+.blue-button:visited:hover,
+.blue-button:focus,
+.blue-button:visited:focus {
+  border-color: #116396;
+  background-color: #1472ad;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1784c9), to(#1472ad));
+  background-image: -webkit-linear-gradient(top, #1784c9, #1472ad);
+  background-image: -moz-linear-gradient(top, #1784c9, #1472ad);
+  background-image: -o-linear-gradient(top, #1784c9, #1472ad);
+  background-image: linear-gradient(to bottom, #1784c9, #1472ad);
+}
+.blue-button:active,
+.blue-button:visited:active {
+  background-color: #1990db;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1681c4), to(#1990db));
+  background-image: -webkit-linear-gradient(top, #1681c4, #1990db);
+  background-image: -moz-linear-gradient(top, #1681c4, #1990db);
+  background-image: -o-linear-gradient(top, #1681c4, #1990db);
+  background-image: linear-gradient(to bottom, #1681c4, #1990db);
+}
+
+
+
+/*
+BASE (MOBILE) SIZE
+This are the mobile styles. It's what people see on their phones. If
+you set a great foundation, you won't need to add too many styles in
+the other stylesheets. Remember, keep it light: Speed is Important.
+*/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Base Mobile Stylesheet
+
+Be light and don't over style since everything here will be
+loaded by mobile devices. You want to keep it as minimal as
+possible. This is called at the top of the main stylsheet
+and will be used across all viewports.
+
+------------ MAP ------------
+
+01. GENERAL STYLES
+02. WORDPRESS BODY CLASSES
+03. LAYOUT & GRID STYLES
+04. LINK STYLES
+05. H1, H2, H3, H4, H5 STYLES
+06. HEADER STYLES
+07. NAVIGATION STYLES
+08. POSTS & CONTENT STYLES
+09. PAGE NAVI STYLES
+10. COMMENT STYLES
+11. COMMENT FORM STYLES
+12. SIDEBARS & ASIDES
+13. FOOTER STYLES
+
+******************************************************************/
+/*********************
+01. GENERAL STYLES
+*********************/
+
+.bannerTitle {
+	font-family: metabook-roman;
+	font-weight: 100;
+}
+/* = HEADER
+-------------------------------------------------*/
+
+#header {
+	width: 100%;
+	position: relative;
+}
+#logo {
+	display: block;
+	margin: 1.4em 0em 1.4em 1.7em;
+	width: 16.8em;	 
+	height: 4.4em;
+	float: left;
+	display: inline;
+}	  	 
+#logo img {
+	display: block;
+	width: 16.8em;
+	height: 4.4em;
+}		  
+
+/* = HEADER BAR
+-------------------------------------------------*/
+
+#header-bar {
+	position: relative;
+	width: 100%;
+	clear: both;
+	background: #22547e url(../images/header_bar_bg.png) repeat-x 0% 0%;
+}
+
+/* = SEARCH AREA
+-------------------------------------------------*/
+
+#search-area {
+	background: #3d729a url(../images/search_area_bg.png) repeat-x 0% 0%;
+	float: right;
+	width: 25em;
+	font-size: 1em;
+}
+
+#search {
+	font-size: 1em;
+	line-height: 1em;
+	margin: 0em;
+	float: left;
+	border: 0em;
+	width: 25em;
+	padding: 0em 2.7em 0em 0em;
+	text-align: left;
+	background: transparent url(../images/search_left_border_bg.png) no-repeat 0% 0%;
+}
+
+#search-inner-wrapper {
+	font-size: 1em;
+	padding: .8em .5em 0em 1.8em;
+	float: left;
+	display: block;
+	margin-right: .9em;
+	height: 2.4em;
+	background: transparent url(../images/search_divider_bg.png) no-repeat 100% 0%;
+}
+
+#search label {
+	position: absolute;
+	left: -9999em;
+}
+
+
+#searchQuery {
+	background: #e0eaf2 url(http://www3.imperial.ac.uk/pls/portallive/docs/1/65329697.GIF) left no-repeat;
+	color: #000;
+	border: 0px;
+	padding: .2em .8em .2em;
+	width: 10.5em;
+	margin: 0em;
+	font-size: 1.1em;
+	line-height: 1.1em;
+	display: block;
+	float: left;
+}
+
+#searchSubmit {
+	display: block;
+	float: left;
+	font-size: 1.1em;
+	padding: 0em .2em 0em .2em;
+	margin: .4em 0em 0em 0.1em;
+	cursor: pointer;
+	background-color: transparent;
+	border: 0em;
+}
+
+#search-people {
+	color: #fff;
+	text-decoration: none;
+	float: right;
+	display: block;
+	font-size: 1.1em;
+	line-height: 1.1em;
+	padding: .915em 1.7em .915em 0em;
+	background: transparent url(../images/icon_find_people.png) no-repeat 100% 50%;
+}
+
+/* = AUDIENCE NAV
+-------------------------------------------------*/
+
+#audience-nav {
+	float: right;
+	color: #fff;
+	font-size: 1em;
+	padding-right: .1em;
+	background: transparent url(../images/audience_nav_right_border_bg.png) no-repeat 100% 0%;
+}
+
+#audience-nav a:link,
+#audience-nav a:visited, 
+#audience-nav a:hover, 
+#audience-nav a:active {
+	color: #fff;
+	text-decoration: none;
+	font-size: 1.1em;
+	line-height: 1.1em;
+	padding: .915em 1.2em .915em 0em;
+	float: left;
+	background: transparent url(../images/bullet_audience_nav.png) no-repeat 100% 50%;
+}
+
+#audience-nav p {
+	float: left;
+	font-size: 1.1em;
+	line-height: 1.1em;
+	padding: .915em .2em .915em 0em;
+	margin: 0px;
+}
+
+#audience-nav ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	font-size: 1em;
+}
+
+#audience-nav li {
+	font-size: 1em;
+	line-height: 1em;
+	margin: 0px;
+	float: left;
+	padding: 0px 1em 0px 1.2em;
+	background: transparent url(../images/audience_nav_divider_bg.png) no-repeat 0% 0%;
+}
+
+#audience-nav li:hover,
+#audience-nav li.hover {
+	background: #3d729a url(../images/audience_nav_hover_bg.png) no-repeat 0% 0%;
+}
+
+#audience-nav li#au-prospective-students {
+	background: transparent none;
+	padding-left: 1em;
+}
+
+#audience-nav li#au-prospective-students:hover,
+#audience-nav li#au-prospective-students.hover {
+	background: #3d729a url(../images/audience_nav_hover_bg.png) no-repeat 0px 0px;
+}	
+
+
+/* = SUB HEADER	 FROM 20-8-07 CSS
+-------------------------------------------------	 */   
+
+#sub-header {
+	color: #fff;
+	background-color: #44b6d0;
+    padding: 1.2em 2.6em; 	 
+	position: relative;
+	height: 86px;
+/*  min-height: 6.2em;  removed: fix needed for IE7 to let flash file grow */
+}	 
+
+#sub-header.top-level {
+	background-color: #44b6d0;
+	border: 0em;
+    padding-top: 1.8em;	  
+	height: 5.6em;	/*  removed: fix needed for IE7 to let flash file grow  */
+}
+
+#sub-header h1,
+#sub-header h2,
+#sub-header .bannerTitle {
+	font-size: 2.8em;
+	line-height: 1.15em;
+	font-weight: normal;
+	padding: 0em;	
+	color: #fff;
+	background: transparent none;
+}
+
+
+/* elements to hide on the mobile view */
+.hidden,
+.back-link,
+#audience-nav p,
+#sub-header #sub-hdr-image {
+	display: none
+}
+
+#sub-header h1 img {
+	display: block;
+}
+
+#sub-header p {
+	margin-top:.55em;
+	font-size: 1.4em;  
+}
+
+#sub-nav {
+	margin: 1.5em 0em 0em;
+	padding: 0px;
+	font-size: 1em;
+}
+
+
+#sub-nav li {
+	display: inline;
+	font-size: 1.2em;
+	line-height: 1.2em;
+	padding: 0em .9em;
+	border-left: 1px solid #fff;
+	background: transparent none;
+	
+}
+
+#sub-nav li.first {
+	padding-left: 0em;
+	border: 0px;
+}
+
+#sub-nav li a:link,
+#sub-nav li a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+
+#sub-nav li a:hover {
+	text-decoration: underline;
+} 	  
+
+#sub-nav li a:active {
+	color: #fff;
+	text-decoration: none;
+}
+
+
+
+/********************
+02. WORDPRESS BODY CLASSES
+    style a page via class
+********************/
+/* for sites that are read right to left (i.e. hebrew) */
+/* home page */
+/* blog template page */
+/* archive page */
+/* date archive page */
+/* replace the number to the corresponding page number */
+/* search page */
+/* search result page */
+/* no results search page */
+/* individual paged search (i.e. body.search-paged-3) */
+/* 404 page */
+/* single post page */
+/* individual post page by id (i.e. body.postid-73) */
+/* individual paged single (i.e. body.single-paged-3) */
+/* attatchment page */
+/* individual attatchment page (i.e. body.attachmentid-763) */
+/* style mime type pages */
+/* author page */
+/* user nicename (i.e. body.author-samueladams) */
+/* paged author archives (i.e. body.author-paged-4) for page 4 */
+/* category page */
+/* individual category page (i.e. body.category-6) */
+/* replace the number to the corresponding page number */
+/* tag page */
+/* individual tag page (i.e. body.tag-news) */
+/* replace the number to the corresponding page number */
+/* custom page template page */
+/* individual page template (i.e. body.page-template-contact-php */
+/* replace the number to the corresponding page number */
+/* parent page template */
+/* child page template */
+/* replace the number to the corresponding page number */
+/* if user is logged in */
+/* paged items like search results or archives */
+/* individual paged (i.e. body.paged-3) */
+/*********************
+03. LAYOUT & GRID STYLES
+*********************/
+.wrap {
+  width: 100%;
+  margin: 0 auto;
+  background-color: white;
+}
+#inner-content {
+	background: #ebecec url(../images/content_area_bg.jpg) repeat-x 0% 0%;
+	padding: 5px;	
+}
+
+#main {
+	background-color: white;
+	margin: .5em;
+	padding: 1.2em;
+	box-shadow: 0px 0px 3px #7c7c7c;
+	font-size: 1.05em;
+}
+#main .entry-content {
+	font-size: 1.15em;
+	line-height: 1.5em;
+	clear: left
+}
+
+.meta-fields dl {
+	float: left;
+	margin: 0;
+	background: url(../images/dotted_line_bg.gif) repeat-y right top;
+}
+.meta-fields dl dt {
+	width: 100px;
+	clear: left;
+	font-weight: bold;
+}
+.meta-fields dl dt,
+.meta-fields dl dd {
+	float: left;
+	margin-bottom: 6px;
+}
+.meta-fields dl dd {
+	margin-right: 30px
+}
+.photo {
+	float: right;
+	margin: 0 0 10px 20px;
+}
+.single-project .entry-content {
+	margin-top: -15px
+}
+
+
+
+/*********************
+04. LINK STYLES
+*********************/
+a,
+a:visited {
+  color: #00548f;
+  /* on hover */
+
+  /* on click */
+
+  /* mobile tap color */
+
+}
+a:hover,
+a:visited:hover,
+a:focus,
+a:visited:focus {
+  color: #00548f;
+}
+a:link,
+a:visited:link {
+  /*
+		this highlights links on iPhones/iPads.
+		so it basically works like the :hover selector
+		for mobile devices.
+		*/
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
+}
+
+#main a,
+#main a:visited {
+  color: #bc2828;
+}
+#main a:hover,
+#main a:visited:hover,
+#main a:focus,
+#main a:visited:focus {
+  color: #bc2828;
+}
+
+
+
+/******************************************************************
+05. H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
+  font-family: Arial, Verdana, sans-serif;
+  text-rendering: optimizelegibility;
+  font-weight: 400;
+  /*
+	if you're going to use webfonts, be sure to check your weights
+	http://css-tricks.com/watch-your-font-weight/
+	*/
+
+  /* removing text decoration from all headline links */
+
+}
+h1 a,
+.h1 a,
+h2 a,
+.h2 a,
+h3 a,
+.h3 a,
+h4 a,
+.h4 a,
+h5 a,
+.h5 a {
+  text-decoration: none;
+}
+
+#main h1,
+#main h2,
+#main h3,
+#main h4,
+#main h5,
+#main h6 {
+	color: #27849a
+}
+#main h2 {
+	margin-bottom: .5em;
+	padding-bottom: .3em;
+	background: transparent url(../images/dotted_line_bg.gif) repeat-x 0% 100%;
+}
+.archive #main h2 {
+	margin-bottom: 0;
+}
+.archive #main h2 span {
+	display: block;
+	font-size: .7em
+}
+.archive article {
+	margin-bottom: 1.5em
+}
+/*********************
+06. HEADER SYTLES
+*********************/
+/*********************
+07. NAVIGATION STYLES
+*********************/
+
+
+/* end .nav */
+/*********************
+08. POSTS & CONTENT STYLES
+*********************/
+.entry-content dd {
+  margin-left: 0;
+  font-size: 0.9em;
+  color: #787878;
+  margin-bottom: 1.5em;
+}
+.entry-content img {
+  margin: 0 0 1.5em 0;
+  max-width: 100%;
+  height: auto;
+}
+.entry-content video,
+.entry-content object {
+  max-width: 100%;
+  height: auto;
+}
+.entry-content pre {
+  background: #eee;
+  border: 1px solid #cecece;
+  padding: 10px;
+}
+/* end .entry-content */
+.wp-caption {
+  max-width: 100%;
+  background: #eee;
+  padding: 5px;
+  /* images inside wp-caption */
+
+}
+.wp-caption img {
+  max-width: 100%;
+  margin-bottom: 0;
+  width: 100%;
+}
+.wp-caption p.wp-caption-text {
+  font-size: 0.85em;
+  margin: 4px 0 7px;
+  text-align: center;
+}
+.readmore {
+	text-decoration: none
+}
+.archive .publication {
+	margin-bottom: 1em;
+}
+.archive .publication .entry-content ul {
+	margin: 0
+}
+.archive .publication .entry-content h3 {
+	margin: .5em 0;
+}
+.archive .person .entry-content p {
+	margin: 0
+}
+
+
+
+/* end .wp-caption */
+/* image gallery styles */
+/* end .gallery */
+/* gallery caption styles */
+/******************************************************************
+09. PAGE NAVI STYLES
+******************************************************************/
+.page-navigation {
+	text-align: right;
+	min-height: 33px;
+}
+.page-navigation ol{
+	display: inline-block;
+}
+.page-navigation ol li a {
+	padding: 8px 3px;
+	text-decoration: none;
+	color: #bc2828;
+}
+.page-navigation .bpn-prev-link a {
+	background: url(../images/dotted_line_bg.gif) repeat-y right top;
+	margin-right: 2px;
+	padding-right: 8px;
+}
+.page-navigation .bpn-next-link a {
+	background: url(../images/dotted_line_bg.gif) repeat-y;
+	margin-left: 5px;
+	padding-left: 8px;
+	padding-right: 0;
+}
+.page-navigation,
+.wp-prev-next {
+  margin-top: 1em;
+}
+/* fallback previous & next links */
+.wp-prev-next .prev-link {
+  float: left;
+}
+.wp-prev-next .next-link {
+  float: right;
+}
+
+
+
+/* end .wp-prev-next */
+
+/******************************************************************
+10. COMMENT STYLES
+******************************************************************/
+.commentlist li {
+  position: relative;
+  clear: both;
+  overflow: hidden;
+  list-style-type: none;
+  margin-bottom: 1.5em;
+  padding: 0.7335em 10px;
+  /* end .commentlist li ul.children */
+
+}
+.commentlist li:last-child {
+  margin-bottom: 0;
+}
+.commentlist li ul.children {
+  margin: 0;
+  /* variations */
+
+  /* change number for different depth */
+
+}
+.commentlist li[class*=depth-] {
+  margin-top: 1.1em;
+}
+.commentlist li.depth-1 {
+  margin-left: 0;
+  margin-top: 0;
+}
+.commentlist li:not(.depth-1) {
+  margin-right: -10px;
+  margin-left: -10px;
+  margin-top: 0;
+  padding-bottom: 0;
+}
+.commentlist .odd {
+  background: #eee;
+}
+.commentlist .even {
+  background: #fefefe;
+}
+.commentlist .vcard {
+  margin-left: 50px;
+}
+.commentlist .vcard cite.fn {
+  font-weight: 700;
+  font-style: normal;
+}
+.commentlist .vcard time {
+  float: right;
+}
+.commentlist .vcard time a {
+  color: #999;
+  text-decoration: none;
+}
+.commentlist .vcard time a:hover {
+  text-decoration: underline;
+}
+.commentlist .vcard img.avatar {
+  position: absolute;
+  left: 10px;
+  padding: 2px;
+  border: 1px solid #cecece;
+  background: #fff;
+}
+.commentlist .comment_content {
+  margin-left: 50px;
+}
+.commentlist .comment_content p {
+  margin: 0.7335em 0 1.5em;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+.commentlist .comment-reply-link {
+  text-decoration: none;
+  float: right;
+  background: #4598bb;
+  padding: 3px 5px;
+  color: #fff;
+  opacity: 0.65;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 0.9em;
+}
+.commentlist .comment-reply-link:hover,
+.commentlist .comment-reply-link:focus {
+  opacity: 1;
+}
+/* end .commentlist */
+/******************************************************************
+11. COMMENT FORM STYLES
+******************************************************************/
+.respond-form {
+  margin: 1.5em 10px;
+  padding-bottom: 2.2em;
+}
+.respond-form form {
+  margin: 0.75em 0;
+}
+.respond-form form li {
+  list-style-type: none;
+  clear: both;
+  margin-bottom: 0.7335em;
+}
+.respond-form form li label,
+.respond-form form li small {
+  display: none;
+}
+.respond-form form input[type=text],
+.respond-form form input[type=email],
+.respond-form form input[type=url],
+.respond-form form textarea {
+  padding: 3px 6px;
+  background: #efefef;
+  border: 2px solid #cecece;
+  line-height: 1.5em;
+  /* form validation */
+
+}
+.respond-form form input[type=text]:focus,
+.respond-form form input[type=email]:focus,
+.respond-form form input[type=url]:focus,
+.respond-form form textarea:focus {
+  background: #fff;
+}
+.respond-form form input[type=text]:invalid,
+.respond-form form input[type=email]:invalid,
+.respond-form form input[type=url]:invalid,
+.respond-form form textarea:invalid {
+  outline: none;
+  border-color: #fbc2c4;
+  background-color: #f6e7eb;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  box-shadow: none;
+}
+.respond-form form input[type=text],
+.respond-form form input[type=email],
+.respond-form form input[type=url] {
+  max-width: 400px;
+  min-width: 250px;
+}
+.respond-form form textarea {
+  resize: none;
+  width: 97.3%;
+  height: 150px;
+}
+/* comment submit button */
+/* comment form title */
+#comment-form-title {
+  margin: 0 0 1.1em;
+}
+/* cancel comment reply link */
+/* logged in comments */
+/* allowed tags */
+#allowed_tags {
+  margin: 1.5em 10px 0.7335em 0;
+}
+/* no comments */
+.nocomments {
+  margin: 0 20px 1.1em;
+}
+
+
+/*********************
+12. SIDEBARS & ASIDES
+*********************/
+.sidebar {
+	margin: 0.5em;
+}
+.widget {
+	margin-bottom: 1.2em;
+	font-size: 1.05em;
+}
+.widget_nav_menu {
+	margin-bottom: 0;
+}
+.widget .widget-title {
+	color: #333;
+	padding: .4em .8em .45em .8em;
+	font-size: 1.1em;
+	margin: 0 0 .5em 0;
+	font-weight: normal;
+	background: transparent url(../images/h2_sub_content_bg.gif) repeat-x 0% 0%;
+}
+.widget h2 span {
+	float: right;
+	padding-left: 10px;
+	position: static;
+}
+.widget ul {
+	list-style: none;
+	margin: 0;
+	padding: 0em 1em 0em 1.1em;
+}
+
+.widget ul li {
+	font-size: 1.2em;
+	line-height: 1.63em;
+	margin-bottom: .2em;
+	padding-left: 1.3em;
+	font-size: 1.1em;
+	color: #797979;
+	background: transparent url(../images/bullet_sub_content.gif) no-repeat 0em .55em;
+}
+.widget ul li a {
+	text-decoration: none
+}
+#main article.wide-widget h2 {
+	padding-bottom: 15px
+}
+
+.widget_related-publications h5 {
+	font-weight: bold;
+	margin: 8px 0 4px 10px;
+	padding: 0;
+	font-size: 1em;
+	color: #6c6c6c;
+}
+.widget_related-publications ul li {
+	line-height: 1.3em;
+	margin-bottom: 4px 
+}
+.widget_all-projects h3 {
+	margin: 0 0 .1em 0;
+}
+.widget_all-projects ul {
+	padding-left: .7em
+}
+.widget_all-projects ul li {
+	margin-bottom: .9em
+}
+/* = TOOLBAR
+-------------------------------------------------
+	Can only appear inside of main content at 
+	the bottom
+-------------------------------------------------*/
+
+#toolbar {
+	position: relative;
+    height: 2.7em;	/* TJ ADDED  */
+	padding: 1em 0;
+	clear: both;
+	background: transparent url(../images/dotted_line_bg.gif) repeat-x 0% 0%;
+	position: relative;
+	top:5px;
+	font-size: .95em;
+}
+
+#content-area-inner-wrapper #toolbar {
+	background-color: #fff;
+	border-top: 1em solid #fff;
+	margin-left: 1em;
+}
+
+.no-sub-content #toolbar {
+	width: 81.4em;
+}
+
+#toolbar #actions {
+	float: left;
+	width: 75%;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+#toolbar #actions li {
+	padding-left: 1.8em;
+	font-size: 1.1em;
+	line-height: 1.6em;
+	padding-right: 1.5em;
+	float: left;
+}
+
+#toolbar #actions li#action-print {
+	background: transparent url(../images/icons/icon_bw_print.gif) no-repeat 0% 50%;
+}
+
+#toolbar #actions li#action-email {
+	background: transparent url(../images/icons/icon_bw_mail.gif) no-repeat 0% 50%;
+}
+
+#toolbar #actions li#action-report {
+	background: transparent url(http://www3.imperial.ac.uk/icimages?p_imgid=23246) no-repeat 0% 50%;
+}
+
+#toolbar #actions li a:link,
+#toolbar #actions li a:visited {
+	text-decoration: none;
+	color: #163d65;
+}
+
+#toolbar #actions li a:hover {
+	text-decoration: underline;
+}	
+
+#toolbar #actions li a:active {
+	text-decoration: none;
+	color: #163d65;
+}
+
+#toolbar dl {
+	margin: 0px;
+	padding: 0px;
+	float: right;
+	display: inline;
+	width: 25%;
+	text-align: right;
+	font-size: 1em;
+}
+
+#toolbar dt {
+	font-size: 1.1em;
+	line-height: 1.6em;
+	margin: 0em;
+	padding: 0em .4em 0em 0em;
+	display: inline;
+	vertical-align: middle;
+}
+
+#toolbar dd {
+	display: inline;
+	vertical-align: middle;
+	font-size: 1.1em;
+	line-height: 1.6em;
+	margin: 0px;
+	padding: 0em 0em 0em .1em;
+}
+
+#toolbar dd img {
+	vertical-align: middle;
+	display: inline;
+	line-height: 1.6em;
+}
+.subscribe {
+	width: 20%;
+	margin-top: 11px;
+	float: left;
+	text-align: left;
+}
+.subscribe a{
+	color: #bc2828;
+	text-decoration: none;
+	background: url(../images/atom_icon.GIF) no-repeat;
+	padding: 2px 0 5px 20px;
+}
+
+/* = EMAIL A FRIEND POPUP
+-------------------------------------------------*/
+
+#emailFriendForm {
+	position: absolute;
+	left: 7em;
+	top: -25em;
+	width: 43em;
+	color: #fff;
+	background-color: #00acc8;
+	border: .6em solid #fff;
+}
+
+#emailFriendForm h2 {
+	font-size: 1.7em;
+	margin: 0em;
+	padding: .6em .7em;
+	color: #fff;
+	font-weight: normal;
+	background: #0087a3 none;
+}
+
+#emailFriendForm form {
+	padding: 1em 1.2em 1em;
+	margin: 0em;
+	background: transparent none;
+	border: 0em;
+}
+
+#emailFriendForm fieldset {
+	border: 0em;
+	padding: 1.1em 1.6em 1.3em;
+	overflow: hidden;
+	margin: 0em;
+	background-color: #48c1d6;
+}
+
+#emailFriendForm fieldset input {
+	border: 0em;
+	background-color: #fff;
+	color: #666;
+	display: block;
+	margin: .3em 0em .6em;
+	width: 15.6em;
+	padding: .2em;
+	font-size: 1.1em;
+}
+
+#emailFriendForm h3 {
+	font-size: 1.3em;
+	line-height: 1.2em;
+	margin: 0em;
+	padding: 0em;
+	color: #fff;
+	background: transparent none;
+	font-weight: normal;
+}
+
+#emailFriendForm p {
+	margin: 0em 0em 1.4em;
+	color: #333;
+}
+
+#emailFriendForm #your-info {
+	float: left;
+	width: 17.9em;
+}
+
+#emailFriendForm #friend-info {
+	float: right;
+	width: 17.9em;
+}
+
+#emailFriendForm label {
+	display: none;
+	color: #fff;
+}
+
+#emailFriendForm .form-actions {
+	font-size: 1.1em;
+	text-align: right;
+	padding: .9em 1.8em 0em;
+}
+
+#emailFriendForm .close {
+	font-size: 1.2em;
+	position: absolute;
+	right: 1em;
+	top: .8em;
+	padding-right: 2em;
+	display: block;
+	padding: .2em 2em .2em 0em;
+	background: transparent url(../images/close_link_bg.gif) no-repeat 100% 50%;
+}
+
+#emailFriendForm a:link,
+#emailFriendForm a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+
+#emailFriendForm a:hover {
+	text-decoration: underline;
+}	  
+#emailFriendForm a:active {
+	color: #fff;
+	text-decoration: none;
+}
+
+
+#report-wrap {
+	position:fixed;
+	left: 0;
+	top:0;
+	background:url(../images/photo_caption_bg.png) repeat scroll 0 0 transparent;
+	height: 100%;
+	width: 100%;
+	transition: all 0.5s linear;
+	-webkit-transition: all 0.5s linear;
+	-moz-transition: all 0.5s linear;
+	-ie-transition: all 0.5s linear;
+}
+#overlay-window {
+	width:100%;
+	/*background-color:#fff;*/
+	/*border:3px solid #841C1C;*/
+	position:absolute;
+	top:100px; 
+	left: 400px;
+	padding:0 1em 1em;
+	z-index:999;
+}
+#report-wrap form {
+	border: .5em solid #adadad;
+	border-width: .5em 0em;
+	background-color: #ededed;
+	width: 366px;
+}
+#report-wrap form fieldset{
+	background-color: #ededed;
+	border: 0em;
+	margin: 0em;
+	padding: 1em;
+	width: 350px;
+	max-width: 350px;
+}
+#report-wrap form fieldset input,
+#report-wrap form fieldset textarea{
+	width: 100%
+}
+#report-wrap form fieldset textarea{
+	height: 70px
+}
+#submitOutdatedContent {
+	background: url(../images/button_submit.gif) transparent;
+}
+div.OChead {
+	background-color: #44b6d0;
+	padding-top: 0.7em;
+	padding-left: .5em;
+	padding-right: .5em;
+	margin-bottom: 0px;
+	font-size: 14px;
+	color: #FFFFFF;
+	width: 366px;
+	height: 33px;
+}
+div.OChead span {
+	float: left;
+	width: 250px;
+	margin-bottom: 5px
+}
+img.OCclose {
+	float: right;
+}
+
+
+
+/*********************
+13. FOOTER 
+*********************/
+.footer {
+  clear: both;
+}
+#footer-nav {
+	margin: 0px;
+	float: left;
+	width: 100%;
+	padding: .5em .6em;
+	background-color: #d4d4d4;
+}
+
+#footer-nav li {
+	margin: 0em;
+	font-size: 1.1em;
+	line-height: 1.5em;
+	padding: 0em 1em;
+	float: left;
+	background: transparent none;
+}
+
+#footer-nav li.greeting {
+	font-weight: bold;
+}
+
+#footer-nav li a:link,
+#footer-nav li a:visited {
+	color: #00548f;
+	text-decoration: none;
+	padding-left: 1.2em;
+	background: transparent url(../images/bullet_footer_nav.gif) no-repeat 0% .4em;
+}
+
+#footer-nav li a:hover {
+	text-decoration: underline;
+ 
+}	  
+
+#footer-nav li a:active {
+	color: #00548f;
+	text-decoration: none;
+	padding-left: 1.2em;
+	background: transparent url(../images/bullet_footer_nav.gif) no-repeat 0% .4em;
+}
+
+/* = ADDRESS
+-------------------------------------------------*/
+												  
+/* SHOULD BE #footer-address TO BE CHANGED*/
+#address {
+	float: left;
+	padding: .8em 1.7em;
+	color: #626262;
+}
+
+#address p {
+	font-size: 1.1em;
+	line-height: 1.3em;
+}
+
+#address a:link,
+#address a:visited {
+	color: #626262;
+	text-decoration: underline;
+}
+
+#address a:hover {
+	text-decoration: none;
+} 
+
+#address a:active {
+	color: #626262;
+	text-decoration: underline;
+}
+
+#address strong {
+	color: #969696;
+}
+
+/* = COPYRIGHT
+-------------------------------------------------*/
+
+#copyright {
+	width: 23.2em;
+	float: right;
+	color: #626262;
+ 	padding: .8em 1.8em 0 0;	
+}
+#copyright p {
+	font-size: 1.1em;
+	line-height: 1.3em;
+	text-align: right;
+}
+.socialbkm  {
+	margin: 0;
+	padding: 0;
+	float: right;
+}
+.socialbkm a {	 
+	padding-left: 0.5em;
+}	
+	
+
+/*
+	if you checked out the link above:
+	http://www.alistapart.com/articles/organizing-mobile/
+	you'll want to style the footer nav
+	a bit more in-depth. Remember to keep
+	it simple because you'll have to
+	override these styles for the desktop
+	view.
+	*/
+/* end .footer-links */
+
+
+
+/*
+LARGER MOBILE DEVICES
+This is for devices like the Galaxy Note or something that's
+larger than an iPhone but smaller than a tablet. Let's call them
+tweeners.
+*/
+@media only screen and (min-width: 481px) {
+  /******************************************************************
+  Site Name: 
+  Author: 
+  
+  Stylesheet: 481px and Up Stylesheet
+  
+  This stylesheet is loaded for larger devices. It's set to 
+  481px because at 480px it would load on a landscaped iPhone.
+  This isn't ideal because then you would be loading all those
+  extra styles on that same mobile connection. 
+  
+  A word of warning. This size COULD be a larger mobile device,
+  so you still want to keep it pretty light and simply expand
+  upon your base.less styles.
+
+  /*********************
+  POSTS & CONTENT STYLES
+  *********************/
+  /* entry content */
+  
+  /* at this larger size, we can start to align images */
+  .entry-content .alignleft,
+  .entry-content img.alignleft {
+    margin-right: 1.5em;
+    display: inline;
+    float: left;
+  }
+  .entry-content .alignright,
+  .entry-content img.alignright {
+    margin-left: 1.5em;
+    display: inline;
+    float: right;
+  }
+  .entry-content .aligncenter,
+  .entry-content img.aligncenter {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    clear: both;
+  }
+  /* end .entry-content */
+  /*********************
+  FOOTER STYLES
+  *********************/
+  /*
+  check your menus here. do they look good?
+  do they need tweaking?
+  */
+  /* end .footer-links */
+}
+
+
+/*
+TABLET & SMALLER LAPTOPS
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*/
+@media only screen and (min-width: 768px) {
+  /******************************************************************
+  Site Name:
+  Author:
+  
+  Stylesheet: Grid Stylesheet
+  
+  I've seperated the grid so you can swap it out easily. It's
+  called at the top the style.less stylesheet.
+  
+  There are a ton of grid solutions out there. You should definitely
+  experiment with your own. Here are some recommendations:
+  
+  http://gridsetapp.com - Love this site. Responsive Grids made easy.
+  http://gridpak.com/ - Create your own responsive grid.
+  
+  The grid below is a combination of the 1140 grid and Twitter Boostrap. 
+  I liked 1140 but Boostrap's grid was way more detailed so I merged them 
+  together, let's see how this works out. If you want to use 1140, the original 
+  values are commented out on each line.
+  
+  ******************************************************************/
+  
+  #sub-header #sub-hdr-image {
+	position: absolute;
+	right: 0em;
+	top: 0em;
+	width: 25em;
+	height: 8.6em;
+	display: block;
+  }
+  #audience-nav p {
+	  display: inline
+  }
+  #main {
+    width: 68%;
+    position: relative;
+    float: left;
+  }
+  #nav-widget,
+  #sub-content {
+    width: 29%;
+    position: relative;
+    float: right;
+    clear: right;
+  }
+  .first {
+    margin-left: 0;
+  }
+  .last {
+    float: right;
+  }
+  /******************************************************************
+  Site Name:
+  Author:
+  
+  Stylesheet: Tablet & Small Desktop Stylesheet
+  
+  Here's where you can start getting into the good stuff.
+  This size will work on iPads, other tablets, and desktops.
+  So you can start working with more styles, background images,
+  and other resources. You'll also notice the grid starts to
+  come into play. Have fun!
+  
+  ******************************************************************/
+  /*********************
+  GENERAL STYLES
+  *********************/
+  h1 {
+	  font-size: 2.2em
+  }
+  .archive #main h2 span {
+	display: inline;
+	font-size: .7em;
+	padding-top: 2px;
+  }
+  .back-link {
+	  display: block;
+  }
+  .back-link a {
+	font-size: 1.1em;
+	text-decoration: none;
+	padding-left: 1.2em;
+	background: transparent url(../images/bullet_back_link.gif) no-repeat 0em .35em;
+  }
+  #main h2.subtitle-right {
+	float: right;
+	width: 100%;
+	text-align: right;
+	padding-bottom: 10px;
+	position: relative;
+	bottom: 20px;
+	margin: 0;
+  }
+  /*********************
+  LAYOUT & GRID STYLES
+  *********************/
+  .wrap {
+    max-width: 870px;
+	padding: 0 10px;
+  }
+  #inner-container {
+	padding: 0 10px 10px 10px;
+	width: 870px;
+	margin: 0 auto;
+	background: white;
+  }
+  /*********************
+  HEADER SYTLES
+  *********************/
+  #header .wrap {
+	padding-bottom: 10px
+  }
+  .person header span {
+	float: right;
+	font-size: 0.8em;
+  }
+  
+  /*********************
+  NAVIGATION STYLES
+  *********************/
+  
+  /* = MAIN NAVIGATION
+	-------------------------------------------------*/
+	
+	#main-nav {
+		font-size: 1em;
+		list-style: none;
+		margin: 0 10px 0 0;
+		padding: 0em 0em 0em 0em;	
+		float: right;
+	}
+	
+	#main-nav li {
+		float: left;
+		position: relative;
+		width: 8.4em;
+		font-size: 1em;
+		padding: .9em 1.2em 0em .65em;  
+		background: transparent none;
+		margin: 1em 0 0 0;
+		height: 4.7em;
+		border-right: .1em solid #d7d7d7;
+	}
+	#main-nav li#mn-faculties-departments {width: 9em}
+	
+	.show-nav #main-nav li {
+		display: block;
+	}
+	
+	.show-nav #main-nav li#mn-home {
+		position: absolute;
+		left: -9999em;
+		width: 0px;
+	}
+	
+	#main-nav li#mn-home {
+		right: 1em;
+		top: 4.7em;
+		display: block;
+		width: auto;	
+		border: 0px;
+		float: none;
+		padding: 0 0 5px 0;
+		line-height: 1.2em;
+		background: transparent none;
+	    
+	    
+	}
+	
+	#main-nav li#mn-home a:link,
+	#main-nav li#mn-home a:visited {
+		position: static;
+		color: #20558f;
+		background: transparent url(../images/bullet_home_link.gif) no-repeat 0% 50%;
+		font-size: 1.2em;
+		width: auto;
+	        padding: 0px 0px 0px 1.2em;  
+		line-height: 1.1em;
+	}
+	
+	#main-nav li#mn-home a:hover {
+		text-decoration: underline;
+	}
+	
+	#main-nav li#mn-home a:active {
+		position: static;
+		color: #20558f;
+		background: transparent url(../images/bullet_home_link.gif) no-repeat 0% 50%;
+		font-size: 1.2em;
+		width: auto;
+		padding: 0px 0px 0px 1.2em;
+		line-height: 1.1em;
+	}
+	
+	#main-nav li#mn-about {
+		border: 0px;
+		padding-right: 0.5em ;
+		width: 5em;	
+	}
+	
+	#main-nav a:link,
+	#main-nav a:visited {
+		position: absolute;
+		left: .68em;
+		bottom: 0em;
+		width: 6em;
+		display: block;
+		vertical-align: bottom;
+		font-size: 1.2em;
+		text-decoration: none;
+		color: #2d6a9d;
+	}
+	
+	#main-nav a:hover {
+		color: #1c4a7c;
+	}				 
+	
+	#main-nav a:active {
+		position: absolute;
+		left: .68em;
+		bottom: 0em;
+		width: 6em;
+		display: block;
+		vertical-align: bottom;
+		font-size: 1.2em;
+		text-decoration: none;
+		color: #2d6a9d;
+	}
+	.readmore:hover {
+		text-decoration: underline
+	}
+  
+  /* end .nav */
+  /*********************
+  SIDEBARS & ASIDES
+  *********************/
+
+  
+  /* links widget */
+  /* meta widget */
+  /* pages widget */
+  /* recent-posts widget */
+  /* archives widget */
+  /* tag-cloud widget */
+  /* calendar widget */
+  /* category widget */
+  /* recent-comments widget */
+  /* search widget */
+  /* text widget */
+  /*********************
+  FOOTER STYLES
+  *********************/
+  /*
+  you'll probably need to do quite a bit
+  of overriding here if you styled them for
+  mobile. Make sure to double check these!
+  */
+  .footer-links ul li {
+    /*
+  			be careful with the depth of your menus.
+  			it's very rare to have multi-depth menus in
+  			the footer.
+  			*/
+  
+  }
+  /* end .footer-links */
+}
+/*
+DESKTOP
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*/
+@media only screen and (min-width: 1030px) {
+  /******************************************************************
+  Site Name: 
+  Author: 
+  
+  Stylesheet: Desktop Stylsheet
+  
+  This is the desktop size. It's larger than an iPad so it will only
+  be seen on the Desktop. 
+  
+  ******************************************************************/
+}
+/*
+LARGE VIEWING SIZE
+This is for the larger monitors and possibly full screen viewers.
+*/
+@media only screen and (min-width: 1240px) {
+  /******************************************************************
+  Site Name: 
+  Author: 
+  
+  Stylesheet: Super Large Monitor Stylesheet
+  
+  You can add some advanced styles here if you like. This kicks in
+  on larger screens.
+  
+  ******************************************************************/
+}
+/*
+RETINA (2x RESOLUTION DEVICES)
+This applies to the retina iPhone (4s) and iPad (2,3) along with
+other displays with a 2x resolution. You can also create a media
+query for retina AND a certain size if you want. Go Nuts.
+*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /******************************************************************
+  Site Name: 
+  Author: 
+  
+  Stylesheet: Retina Screens & Devices Stylesheet
+  
+  When handling retina screens you need to make adjustments, especially
+  if you're not using font icons. Here you can add them in one neat
+  place.
+  
+  ******************************************************************/
+  /* 
+  
+  EXAMPLE 
+  Let's say you have an image and you need to make sure it looks ok
+  on retina screens. Let's say we have an icon which dimension are
+  24px x 24px. In your regular stylesheets, it would look something
+  like this:
+  
+  .icon {
+  	width: 24px;
+  	height: 24px;
+  	background: url(img/test.png) no-repeat;
+  }
+  
+  For retina screens, we have to make some adjustments, so that image
+  doesn't look blurry. So, taking into account the image above and the
+  dimensions, this is what we would put in our retina stylesheet:
+  
+  .icon {
+  	background: url(img/test@2x.png) no-repeat;
+  	background-size: 24px 24px;
+  }
+  
+  So, you would create the same icon, but at double the resolution, meaning 
+  it would be 48px x 48px. You'd name it the same, but with a @2x at the end
+  (this is pretty standard practice). Set the background image so it matches
+  the original dimensions and you are good to go. 
+  
+  */
+}
+/*
+iPHONE 5 MEDIA QUERY
+Want to get fancy for no good reason? Knock yourself out.
+*/
+@media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  
+}
+/*
+PRINT STYLESHEET
+Feel free to customize this. Remember to add things that won't make
+sense to print at the bottom. Things like nav, ads, and forms should
+be set to display none.
+*/
+@media print {
+  /******************************************************************
+  Site Name:
+  Author:
+  
+  Stylesheet: Print Stylesheet
+  
+  This is the print stylesheet. There's probably not a lot
+  of reasons to edit this stylesheet. If you want to
+  though, go for it.
+  
+  ******************************************************************/
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+  a,
+  a:visited {
+    color: #444 !important;
+    text-decoration: underline;
+  }
+  a:after,
+  a:visited:after {
+    content: " (" attr(href) ")";
+  }
+  a abbr[title]:after,
+  a:visited abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  @page  {
+    margin: 0.5cm;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+  .sidebar,
+  .page-navigation,
+  .wp-prev-next,
+  .respond-form,
+  nav {
+    display: none;
+  }
+}
